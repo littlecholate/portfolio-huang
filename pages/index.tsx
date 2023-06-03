@@ -15,8 +15,8 @@ const Home: NextPage = () => {
                 <title>Homepage</title>
             </Head>
             <Header />
-            <Banner1 />
-            <Banner2 />
+            <Banner1 /> {/*  Image with a brief greetings */}
+             <Banner2 /> {/* Brief introduction of my role, position, and interests */}
             <Banner3 />
             <Banner4 />
             <Banner5 />

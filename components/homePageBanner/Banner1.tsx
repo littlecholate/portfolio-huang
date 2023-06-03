@@ -1,40 +1,42 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { motion } from 'framer-motion';
+
 
 type Props = {};
 
+function VaraText({ text }: { text: string }) {
+    useEffect(() => {
+      var vara = new Vara(
+        "#vara-container",
+        "https://raw.githubusercontent.com/akzhy/Vara/master/fonts/Satisfy/SatisfySL.json",
+        [
+          {
+            text: text,
+            fontSize: 40,
+            strokeWidth: 0.7,
+          },
+        ]
+      );
+    }, []);
+  
+    return <div id="vara-container" className="z-[20]"></div>;
+  }
+
+
 function Banner1({}: Props) {
+    
     return (
-        
-        <section id="banner1" className="bg-stone-950  min-h-screen center">
-            Banner1
+        <section id="banner1" className="bg-gradient-to-tl from-black via-stone-800 to-stone-500  min-h-screen bg-blend-overlay">
             <motion.img
                 initial={{ x: -30, opacity: 0, scale: 1}}
-                whileInView={{ x: -30, opacity: 1 , scale: 1}}
+                whileInView={{ x: -30, opacity: 0.5 , scale: 1}}
                 transition={{ duration: 3 }}
                 src="/images/home/Beginner.jpg"
-                className="w-auto"
+                className="w-fit z-10 "
             />
-            {/* <body>
-                <div id="container"></div>
-                <script>
-                    var fontSize = 72;
-                        if (window.screen.width > 700)
-                            fontSize = 32;
-                        elseif (window.screen.width < 1200)
-                            fontSize = 57;
-                    var vara = new Vara([
-                        "#container", 
-                        "https://raw.githubusercontent.com/akzhy/Vara/master/fonts/Satisfy/SatisfySL.json",
-                        [
-                            {
-                                text: "Hi"
-                            }
-                        ]
-                    ])
-
-                </script>
-            </body> */}
+            {/* <div>
+                <VaraText text='WiseCode Team' />
+            </div> */}
         </section>
     );
 }

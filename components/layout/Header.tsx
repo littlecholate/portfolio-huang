@@ -6,7 +6,7 @@ type Props = {};
 
 function Header({}: Props) {
     return (
-        <header className="fixed w-full p-5 z-20 center">
+        <header className="fixed w-full p-5 center z-20">
             <div className="absolute left-6">
                 <MenuButton />
             </div>
