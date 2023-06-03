@@ -7,7 +7,7 @@ type Props = {};
 function Header({}: Props) {
     return (
         <header className="fixed w-full p-5 z-20 center">
-            <div className="absolute left-5">
+            <div className="absolute left-6">
                 <MenuButton />
             </div>
 
@@ -15,7 +15,7 @@ function Header({}: Props) {
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 1 }}
-                className="text-2xl font-bold"
+                className="text-neutral-50 text-2xl font-bold"
             >
                 Cheng-Tse Sam Huang
             </motion.div>

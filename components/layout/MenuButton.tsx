@@ -5,8 +5,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 type Props = {};
 
-const pageTitle = ['首頁', 'About Me'];
-const pageLink = ['/', '/aboutMe'];
+const pageTitle = ['Home', 'About Me', 'Research', 'Publications', 'Teaching', 'People', 'Invited Talks', 'Outreach', 'Contact Me'];
+const pageLink = ['/', '/aboutMe', '/Research', '/Publications', '/Teaching', '/People', '/InvitedTalks', '/Outreach', '/ContactMe'];
 
 function MenuButton({}: Props) {
     const [anchorEl, setAnchorEl] = useState(null);
@@ -18,7 +18,7 @@ function MenuButton({}: Props) {
     return (
         <div>
             <IconButton onClick={handleMenuClick}>
-                <MenuIcon className="h-6 w-6" />
+                <MenuIcon className="h-6 w-6 text-sky-50" />
             </IconButton>
             <Menu
                 anchorEl={anchorEl}
