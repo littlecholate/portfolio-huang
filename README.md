@@ -23,6 +23,5 @@
 | 動畫 | Framer Motion | https://www.framer.com/motion/
 | 美術 | TailwindCss | https://tailwindcss.com/
 
-| 表格   | 第一列 | 第二列 |
 | ------ | :----: | :----: |
 | 第一行 | 第一列 | 第二列 |
