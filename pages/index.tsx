@@ -10,17 +10,16 @@ import ScrollButton from '../components/layout/ScrollButton';
 
 const Home: NextPage = () => {
     return (
-        <div>
+        <div className="overflow-x-hidden">
             <Head>
                 <title>Homepage</title>
             </Head>
             <Header />
             <Banner1 /> {/*  Image with a brief greetings */}
-             <Banner2 /> {/* Brief introduction of my role, position, and interests */}
-            <Banner3 />
+            <Banner2 /> {/* Brief introduction of my role, position, and interests */}
+            {/* <Banner3 />
             <Banner4 />
-            <Banner5 />
-
+            <Banner5 /> */}
             {/* Other Component */}
             <ScrollButton />
         </div>
