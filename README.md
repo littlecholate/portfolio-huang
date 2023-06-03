@@ -20,9 +20,9 @@
 
 ## Technical Stacks
 
-| Technical Stacks | Name                | Link                           |
-| ---------------- | ------------------- | ------------------------------ |
-| 框架             | Next.js(React 體系) | https://nextjs.org/            |
-| UI               | Material-UI v5      | https://mui.com/zh/            |
-| 動畫             | Framer Motion       | https://www.framer.com/motion/ |
-| 美術             | TailwindCss         | https://tailwindcss.com/       |
+| Technical Stacks | Name                 | Link                           |
+| ---------------- | -------------------- | ------------------------------ |
+| 框架             | Next.js (React 體系) | https://nextjs.org/            |
+| UI               | Material-UI v5       | https://mui.com/zh/            |
+| 動畫             | Framer Motion        | https://www.framer.com/motion/ |
+| 美術             | TailwindCss          | https://tailwindcss.com/       |
