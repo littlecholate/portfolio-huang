@@ -22,7 +22,7 @@ function Banner2({}: Props) {
                     whileInView={{ x: 0, opacity: 1, scale: 1.5 }}
                     transition={{ duration: 1 }}
                     src="/images/home/Me.jpeg"
-                    className="w-72  rounded-lg"
+                    className="w-72  rounded-lg "
                 />
             </div>
         </section>
