@@ -17,9 +17,9 @@ const Home: NextPage = () => {
             <Header />
             <Banner1 /> {/*  Image with a brief greetings */}
             <Banner2 /> {/* Brief introduction of my role, position, and interests */}
-            {/* <Banner3 />
-            <Banner4 />
-            <Banner5 /> */}
+            <Banner4 /> {/* Research topic introduction */}
+            <Banner5 /> {/* publication status and relationship */}
+            <Banner3 /> {/* bio timeline */}
             {/* Other Component */}
             <ScrollButton />
         </div>
