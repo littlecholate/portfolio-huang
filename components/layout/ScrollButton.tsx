@@ -26,7 +26,7 @@ function ScrollButton({}: Props) {
             onClick={scrollToTop}
             style={{ display: visible ? 'inline' : 'none' }}
         >
-            <ArrowCircleUpIcon className="w-10 h-10" />
+            <ArrowCircleUpIcon className="w-10 h-10 text-white" />
         </button>
     );
 }
