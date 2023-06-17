@@ -31,7 +31,7 @@ function VaraText() {
                 strokeWidth: 2,
                 fontSize: 60,
                 color: 'white',
-                textAlign: 'center',
+                textAlign: 'left',
             }
         );
         //         vara.ready (function () {
@@ -51,11 +51,16 @@ function VaraText() {
 
 function Banner1({}: Props) {
     return (
-        <section id="banner1" className="relative bg-gradient-to-tl from-black via-stone-800 to-stone-300">
+        <section id="banner1" className="relative bg-gradient-to-tl from-black via-stone-800 to-stone-300 ">
             <div className="bg-[url('/images/home/Beginner.jpg')] bg-cover mix-blend-overlay h-screen"></div>
-            <div className="absolute w-2/3 bottom-5 right-5">
-                <VaraText />
+            {/* <div className="absolute w-2/3 bottom-5 right-5 order-1 bg-slate-500"> */}
+            {/* <div className="absolute w-2/3 justify-normal bg-slate-500"> */}
+            <div className="absolute w-1/2 top-3/4 left-1/2">
+            <VaraText />
             </div>
+            {/* <div className="absolute w-1/2 top-1/2 left-1/2 bg-slate-400">
+            afsdfasdfas d fdas fdas fas f
+            </div> */}
         </section>
     );
 }

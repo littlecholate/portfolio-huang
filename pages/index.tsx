@@ -9,6 +9,7 @@ import Banner5 from '../components/homePageBanner/Banner5';
 import ScrollButton from '../components/layout/ScrollButton';
 
 const Home: NextPage = () => {
+    
     return (
         <div className="overflow-x-hidden">
             <Head>
