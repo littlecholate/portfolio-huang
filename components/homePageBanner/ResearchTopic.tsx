@@ -26,31 +26,22 @@ const data = [
     },
 ];
 
-type Props = { title: string; intro: string; bg: string };
-
-function Banner({ title, intro, bg }: Props) {
-    let bannerStyle = 'h-1/4 w-1/2 flex items-center justify-items-end ' + bg;
-    return (
-        <section>
-            我希望方格是貼右邊的
-        <div className={bannerStyle}>
-            <div id="content" className=" h-4/5 ml-20 p-20 space-y-12">
-                <div className="text-4xl">{title}</div>
-                <div>{intro}</div>
-                {/* <button className="text-xl outline p-3">Find Out More</button> */}
-            </div>
-        </div>
-        <div className="bg-[url('/images/home/bg.jpg')] bg-cover bg-fixed"></div>
-        </section>
-    );
-}
-
 function ResearchTopic() {
     return (
         <section id="researchTopic" className="w-full">
-            {data.map((item, index) => (
-                <Banner key={index} title={item.title} intro={item.content} bg={item.background} />
-            ))}
+            {data.map((item, index) => {
+                return (
+                    <div key={index} className="w-full flex justify-end">
+                        <div className={`h-1/4 w-1/2 center ` + item.background}>
+                            <div id="content" className="h-4/5 p-20 space-y-10">
+                                <div className="text-4xl">{item.title}</div>
+                                <div>{item.content}</div>
+                                {/* <button className="text-xl outline p-3">Find Out More</button> */}
+                            </div>
+                        </div>
+                    </div>
+                );
+            })}
         </section>
     );
 }
