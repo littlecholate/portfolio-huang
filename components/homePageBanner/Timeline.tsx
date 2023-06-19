@@ -61,9 +61,9 @@ import { Chrono } from 'react-chrono';
 //     );
 // }
 
-function Banner3({}: Props) {
+function Banner5({}: Props) {
     return (
-        <section id="banner3" className="bg-black center">
+        <section id="banner5" className="bg-black center">
             <VerticalTimeline>
                 <VerticalTimelineElement
                     className="vertical-timeline-element--education"
@@ -105,4 +105,4 @@ function Banner3({}: Props) {
     );
 }
 
-export default Banner3;
+export default Banner5;

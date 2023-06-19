@@ -1,26 +1,33 @@
+import { useEffect, useState } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Header from '../components/layout/Header';
-import Banner1 from '../components/homePageBanner/Banner1';
-import Banner2 from '../components/homePageBanner/Banner2';
-import Banner3 from '../components/homePageBanner/Banner3';
-import Banner4 from '../components/homePageBanner/Banner4';
-import Banner5 from '../components/homePageBanner/Banner5';
+import HomeBanner from '../components/homePageBanner/HomeBanner';
+import ResearchTopic from '../components/homePageBanner/ResearchTopic';
+import Publication from '../components/homePageBanner/Publication';
+import Timeline from '../components/homePageBanner/Timeline';
 import ScrollButton from '../components/layout/ScrollButton';
 
 const Home: NextPage = () => {
-    
+    const [scrollY, setScrollY] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => setScrollY(window.scrollY);
+        handleScroll();
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     return (
         <div className="overflow-x-hidden">
             <Head>
                 <title>Homepage</title>
             </Head>
             <Header />
-            <Banner1 /> {/*  Image with a brief greetings */}
-            <Banner2 /> {/* Brief introduction of my role, position, and interests */}
-            <Banner4 /> {/* Research topic introduction */}
-            <Banner5 /> {/* publication status and relationship */}
-            <Banner3 /> {/* bio timeline */}
+            <HomeBanner scrollY={scrollY} /> {/* Image with a brief greetings */}
+            <ResearchTopic /> {/* Research topic introduction */}
+            <Publication /> {/* publication status and relationship */}
+            <Timeline /> {/* bio timeline */}
             {/* Other Component */}
             <ScrollButton />
         </div>

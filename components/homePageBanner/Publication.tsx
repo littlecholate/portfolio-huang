@@ -1,6 +1,4 @@
 import React from 'react';
-import  {  StyleSheet,  Text,  View}  from  'react-native';
-import { motion } from 'framer-motion';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -27,20 +25,15 @@ function Banner4({}: Props) {
         // </section>
         <Card sx={{ maxWidth: 1345 }}>
             <CardActionArea>
-            <CardMedia
-          component="img"
-          height="140"
-          image="/images/home/Beginner.jpg"
-          alt="green iguana"
-        />
-            <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-          Particle phenomenology
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-          Particle phenomenologyadfs dfas d
-          </Typography>
-        </CardContent>
+                <CardMedia component="img" height="140" image="/images/home/Beginner.jpg" alt="green iguana" />
+                <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                        Particle phenomenology
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                        Particle phenomenologyadfs dfas d
+                    </Typography>
+                </CardContent>
             </CardActionArea>
             {/* <CardActions>
         <Button size="small" color="primary">
