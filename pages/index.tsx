@@ -23,10 +23,10 @@ const Home: NextPage = () => {
             <Head>
                 <title>Homepage</title>
             </Head>
-            <Header />
+            <Header scrollY={scrollY} />
             <HomeBanner scrollY={scrollY} /> {/* Image with a brief greetings */}
             <ResearchTopic /> {/* Research topic introduction */}
-            <Publication /> {/* publication status and relationship */}
+            {/*<Publication /> {/* publication status and relationship */}*/}
             <Timeline /> {/* bio timeline */}
             {/* Other Component */}
             <ScrollButton />

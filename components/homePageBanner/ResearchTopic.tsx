@@ -29,15 +29,19 @@ const data = [
 type Props = { title: string; intro: string; bg: string };
 
 function Banner({ title, intro, bg }: Props) {
-    let bannerStyle = 'h-screen flex items-center ' + bg;
+    let bannerStyle = 'h-1/4 w-1/2 flex items-center justify-items-end ' + bg;
     return (
+        <section>
+            我希望方格是貼右邊的
         <div className={bannerStyle}>
-            <div id="content" className="w-1/2 h-4/5 ml-20 p-20 space-y-12">
+            <div id="content" className=" h-4/5 ml-20 p-20 space-y-12">
                 <div className="text-4xl">{title}</div>
                 <div>{intro}</div>
-                <button className="text-xl outline p-3">Find Out More</button>
+                {/* <button className="text-xl outline p-3">Find Out More</button> */}
             </div>
         </div>
+        <div className="bg-[url('/images/home/bg.jpg')] bg-cover bg-fixed"></div>
+        </section>
     );
 }
 

@@ -14,17 +14,17 @@ function HomeBanner({ scrollY }: Props) {
                 {
                     text: "Hi! I'm Sam Huang",
                     y: 10,
-                    duration: 4000,
+                    duration: 3500,
                 },
-                {
-                    text: 'Welcome to my creativity ',
-                    delay: 800,
-                    duration: 3000,
-                },
+                // {
+                //     text: 'Welcome to my creativity ',
+                //     delay: 800,
+                //     duration: 2500,
+                // },
             ],
             {
                 strokeWidth: 2,
-                fontSize: 60,
+                fontSize: 70,
                 color: 'white',
                 textAlign: 'left',
             }
@@ -33,31 +33,38 @@ function HomeBanner({ scrollY }: Props) {
 
     return (
         <section id="homeBanner" className="bg-[url('/images/home/bg.jpg')] bg-cover bg-fixed">
-            <div className={`backdrop-blur-[${Math.floor(scrollY / 80)}px]`}>
+            <div className={`backdrop-blur-[${Math.floor(scrollY / 60)}px]`}>
+                文字還是會跟著一棟，且無法變模糊
+                <div id="handwriteText-container" className={`h-screen center blur-[${Math.floor(scrollY / 60)}px]`}>
+                        <div id="vara-container" className="w-1/2 h-1/2 z-[20]"></div>
+                    </div>
                 {/* FirstBanner */}
-                <div className="relative h-screen">
+                {/* <div className="relative h-screen">
                     <div id="handwriteText-container" className="absolute w-1/2 top-3/4 left-1/2">
                         <div id="vara-container" className="z-[20]"></div>
                     </div>
-                </div>
+                </div> */}
                 {/* Introduction */}
-                <div className="h-screen w-5/6 mx-auto px-10 flex flex-col md:flex-row justify-evenly items-center">
-                    <motion.div
-                        initial={{ x: 0, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        transition={{ duration: 1 }}
-                        className="w-6/12 mt-8 md:mt-0 md:px-10 text-neutral-50 text-2xl font-bold"
-                    >
-                        I am a theoretical physicist exploring the quamtum nature of the universe. Currently, I am researching on
-                        particle phenomenology on the journey of Physics PhD at Rutgers University, New Brunswick.
-                    </motion.div>
-                    <motion.img
-                        initial={{ x: 300, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1, scale: 1.5 }}
-                        transition={{ duration: 1 }}
-                        src="/images/home/Me.jpeg"
-                        className="w-72  rounded-lg "
-                    />
+                <div className="">
+                    <div className="h-screen w-5/6 mx-auto px-10 flex flex-col md:flex-row justify-evenly items-center ">
+                        <motion.div
+                            initial={{ x: 0, opacity: 1 }}
+                            whileInView={{ x: 0, opacity: 1 }}
+                            transition={{ duration: 1 }}
+                            className="w-6/12 mt-8 md:mt-0 md:px-10 text-white text-4xl font-bold"
+                        >
+                            I am a theoretical physicist exploring the quamtum nature of the universe.
+                            {/* I am a theoretical physicist exploring the quamtum nature of the universe. Currently, I am researching on
+                            particle phenomenology on the journey of Physics PhD at Rutgers University, New Brunswick. */}
+                        </motion.div>
+                        <motion.img
+                            initial={{ x: 0, opacity: 1 }}
+                            whileInView={{ x: 0, opacity: 1, scale: 1 }}
+                            transition={{ duration: 1 }}
+                            src="/images/home/Me.jpeg"
+                            className="w-72  rounded-lg "
+                        />
+                    </div>
                 </div>
             </div>
         </section>
