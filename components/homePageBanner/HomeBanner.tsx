@@ -46,12 +46,13 @@ function HomeBanner({ scrollY }: Props) {
                         initial={{ x: 0, opacity: 1 }}
                         whileInView={{ x: 0, opacity: 1 }}
                         transition={{ duration: 1 }}
-                        className="w-6/12 mt-8 md:mt-0 md:px-10 text-white text-4xl font-bold"
+                        className="w-6/12 mt-8 md:mt-0 md:px-10 text-white text-4xl font-bold sticky"
                     >
                         I am a theoretical physicist exploring the quamtum nature of the universe.
                         {/* I am a theoretical physicist exploring the quamtum nature of the universe. Currently, I am researching on
                             particle phenomenology on the journey of Physics PhD at Rutgers University, New Brunswick. */}
                     </motion.div>
+                    <div>
                     <motion.img
                         initial={{ x: 0, opacity: 1, scale: 1.5 }}
                         whileInView={{ x: 0, opacity: 1, scale: 1.5 }}
@@ -59,6 +60,8 @@ function HomeBanner({ scrollY }: Props) {
                         src="/images/home/Me.jpeg"
                         className="w-72  rounded-lg "
                     />
+                    <ResearchTopic scrollY={scrollY} />
+                    </div>
                 </div>
                     <ResearchTopic scrollY={scrollY} />
             </div>
