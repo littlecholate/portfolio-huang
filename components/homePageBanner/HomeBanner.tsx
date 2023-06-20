@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import Vara from 'vara';
 import { motion } from 'framer-motion';
 
+import ResearchTopic from './ResearchTopic';
+
 type Props = { scrollY: number };
 
 function HomeBanner({ scrollY }: Props) {
@@ -35,7 +37,7 @@ function HomeBanner({ scrollY }: Props) {
             {/* 判斷滑條是否超過特定值，藉此隱藏手寫字 */}
             <div id="vara-container" className={scrollY > 1000 ? 'hidden middle w-1/2' : 'fixed middle w-1/2'}></div>
             {/* backdrop-blur 將上面所有元素模糊 */}
-            <div className={`relative backdrop-blur-[${Math.floor(scrollY / 60)}px]`}>
+            <div className={`relative backdrop-blur-[${Math.min(Math.floor(scrollY / 60),18)}px]`}>
                 {/* FirstBanner */}
                 <div className="h-screen center"></div>
                 {/* Introduction */}
@@ -51,13 +53,14 @@ function HomeBanner({ scrollY }: Props) {
                             particle phenomenology on the journey of Physics PhD at Rutgers University, New Brunswick. */}
                     </motion.div>
                     <motion.img
-                        initial={{ x: 0, opacity: 1 }}
-                        whileInView={{ x: 0, opacity: 1, scale: 1 }}
+                        initial={{ x: 0, opacity: 1, scale: 1.5 }}
+                        whileInView={{ x: 0, opacity: 1, scale: 1.5 }}
                         transition={{ duration: 1 }}
                         src="/images/home/Me.jpeg"
                         className="w-72  rounded-lg "
                     />
                 </div>
+                    <ResearchTopic scrollY={scrollY} />
             </div>
         </section>
     );
