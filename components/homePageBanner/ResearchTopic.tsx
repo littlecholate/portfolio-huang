@@ -41,7 +41,7 @@ function ResearchTopic({ scrollY }: Props) {
                         {data.map((item, index) => {
                 return (
                     <div key={index} className="w-full flex justify-end">
-                        <div className={`h-1/4 w-1/2 center ` + item.background}>
+                        <div className={`h-1/4 center ` + item.background}>
                             <div id="content" className="h-4/5 p-20 space-y-10">
                                 <div className="text-4xl">{item.title}</div>
                                 <div>{item.content}${Math.max(100-Math.floor(scrollY / 100)*5,0)}</div>
