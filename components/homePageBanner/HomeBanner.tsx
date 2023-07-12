@@ -1,12 +1,14 @@
 import React, { useEffect } from 'react';
 import Vara from 'vara';
 import { motion } from 'framer-motion';
+import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
 import ResearchTopic from './ResearchTopic';
 
 type Props = { scrollY: number };
 
 function HomeBanner({ scrollY }: Props) {
+  const alignCenter = { display: 'flex', alignItems: 'center' }
     useEffect(() => {
         // handwrite effect
         var vara = new Vara(
@@ -58,13 +60,35 @@ function HomeBanner({ scrollY }: Props) {
                         src="/images/home/Me.jpeg"
                         className="w-72  rounded-lg absolute "
                     />
-                        
+                        `
                     </div>
-                    <div className="relative w-full mx-0 bg-slate-200">
-                            <ResearchTopic scrollY={scrollY} />
                         </div>
-                </div>
-                    <ResearchTopic scrollY={scrollY} />
+        <div className="h-screen w-screen"> 
+        <Parallax pages={4}>
+        <ParallaxLayer offset={0} speed={0.5} style={{ ...alignCenter, justifyContent: 'center' }}>
+          <p className="center text-white text-4xl font-bold">Scroll down</p>
+        </ParallaxLayer>
+
+        <ParallaxLayer sticky={{ start: 1, end: 3 }} style={{ ...alignCenter, justifyContent: 'flex-start' }}>
+          <div className={`relative center w-7/12 text-white text-4xl font-bold`}>
+            <p>I'm a sticky layer</p>
+          </div>
+        </ParallaxLayer>
+
+        <ParallaxLayer offset={1.5} speed={1} style={{ ...alignCenter, justifyContent: 'flex-end' }}>
+          <div className={`relative center w-5/12 text-white text-4xl font-bold`}>
+            <p>I'm not</p>
+          </div>
+        </ParallaxLayer>
+
+        <ParallaxLayer offset={2.5} speed={1} style={{ ...alignCenter, justifyContent: 'flex-end' }}  >
+          <div className={`relative center w-6/12 text-white text-4xl font-bold`}>
+            <p><ResearchTopic scrollY={scrollY} /></p>
+          </div>
+        </ParallaxLayer>
+      </Parallax>
+      </div>
+                    
             </div>
         </section>
     );
