@@ -43,7 +43,7 @@ function HomeBanner({ scrollY }: Props) {
                 {/* FirstBanner */}
                 <div className="h-screen center"></div>
                 {/* Introduction */}
-                <div className="h-screen w-full mx-auto  flex flex-col md:flex-row justify-evenly items-center bg-slate-500">
+                <div className="h-screen w-full mx-auto  flex flex-col md:flex-row justify-evenly items-center">
                     <motion.div
                         initial={{ x: 0, opacity: 1 }}
                         whileInView={{ x: 0, opacity: 1 }}
@@ -52,7 +52,7 @@ function HomeBanner({ scrollY }: Props) {
                     >
                         I am a theoretical physicist exploring the quamtum nature of the universe.
                     </motion.div>
-                    <div className="w-6/12 center bg-slate-400">
+                    <div className="w-6/12 center">
                     <motion.img
                         initial={{ x: 0, opacity: 1, scale: 1.5 }}
                         whileInView={{ x: 0, opacity: 1, scale: 1.5 }}
@@ -63,31 +63,49 @@ function HomeBanner({ scrollY }: Props) {
                         `
                     </div>
                         </div>
-        <div className="h-screen w-screen"> 
-        <Parallax pages={4}>
+        {/* <div className="  w-screen overflow-hidden bg-red-500"> 
+        <Parallax pages={5}>
         <ParallaxLayer offset={0} speed={0.5} style={{ ...alignCenter, justifyContent: 'center' }}>
           <p className="center text-white text-4xl font-bold">Scroll down</p>
         </ParallaxLayer>
 
         <ParallaxLayer sticky={{ start: 1, end: 3 }} style={{ ...alignCenter, justifyContent: 'flex-start' }}>
-          <div className={`relative center w-7/12 text-white text-4xl font-bold`}>
+          <div className={``}>
             <p>I'm a sticky layer</p>
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={1.5} speed={1} style={{ ...alignCenter, justifyContent: 'flex-end' }}>
-          <div className={`relative center w-5/12 text-white text-4xl font-bold`}>
+        <ParallaxLayer offset={1.5} speed={1.5} style={{ ...alignCenter, justifyContent: 'flex-end' }}>
+          <div className={`center w-6/12 text-white text-4xl font-bold`}>
             <p>I'm not</p>
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={2.5} speed={1} style={{ ...alignCenter, justifyContent: 'flex-end' }}  >
-          <div className={`relative center w-6/12 text-white text-4xl font-bold`}>
+        <ParallaxLayer offset={2.5} speed={1.5} style={{ ...alignCenter, justifyContent: 'flex-end' }}  >
+          <div className={`center w-6/12 text-white text-4xl font-bold`}>
             <p><ResearchTopic scrollY={scrollY} /></p>
           </div>
         </ParallaxLayer>
+
+         <ParallaxLayer sticky={{ start: 3, end: 5 }} style={{ ...alignCenter, justifyContent: 'flex-end' }}>
+          <div className={`relative center w-6/12 text-white text-4xl font-bold`}>
+            <p>I'm the second sticky layer</p>
+          </div>
+        </ParallaxLayer>
+
+        <ParallaxLayer offset={3.5} speed={1} style={{ ...alignCenter, justifyContent: 'flex-start' }}>
+          <div className={`relative center w-6/12 text-white text-4xl font-bold`}>
+            <p>I'm not</p>
+          </div>
+        </ParallaxLayer>
+
+        <ParallaxLayer offset={4.5} speed={1} style={{ ...alignCenter, justifyContent: 'flex-start' }}  >
+          <div className={`relative center w-6/12 text-white text-4xl font-bold`}>
+            <p><ResearchTopic scrollY={scrollY} /></p>
+          </div>
+        </ParallaxLayer> 
       </Parallax>
-      </div>
+      </div> */}
                     
             </div>
         </section>
