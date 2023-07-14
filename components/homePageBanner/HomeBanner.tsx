@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
 import Vara from 'vara';
 import { motion } from 'framer-motion';
-import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+//import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
 import ResearchTopic from './ResearchTopic';
 
 type Props = { scrollY: number };
 
 function HomeBanner({ scrollY }: Props) {
-  const alignCenter = { display: 'flex', alignItems: 'center' }
+    const alignCenter = { display: 'flex', alignItems: 'center' };
     useEffect(() => {
         // handwrite effect
         var vara = new Vara(
@@ -39,7 +39,7 @@ function HomeBanner({ scrollY }: Props) {
             {/* 判斷滑條是否超過特定值，藉此隱藏手寫字 */}
             <div id="vara-container" className={scrollY > 1000 ? 'hidden middle w-1/2' : 'fixed middle w-1/2'}></div>
             {/* backdrop-blur 將上面所有元素模糊 */}
-            <div className={`relative backdrop-blur-[${Math.min(Math.floor(scrollY / 60),18)}px]`}>
+            <div className={`relative backdrop-blur-[${Math.min(Math.floor(scrollY / 60), 18)}px]`}>
                 {/* FirstBanner */}
                 <div className="h-screen center"></div>
                 {/* Introduction */}
@@ -53,17 +53,17 @@ function HomeBanner({ scrollY }: Props) {
                         I am a theoretical physicist exploring the quamtum nature of the universe.
                     </motion.div>
                     <div className="w-6/12 center">
-                    <motion.img
-                        initial={{ x: 0, opacity: 1, scale: 1.5 }}
-                        whileInView={{ x: 0, opacity: 1, scale: 1.5 }}
-                        transition={{ duration: 1 }}
-                        src="/images/home/Me.jpeg"
-                        className="w-72  rounded-lg absolute "
-                    />
+                        <motion.img
+                            initial={{ x: 0, opacity: 1, scale: 1.5 }}
+                            whileInView={{ x: 0, opacity: 1, scale: 1.5 }}
+                            transition={{ duration: 1 }}
+                            src="/images/home/Me.jpeg"
+                            className="w-72  rounded-lg absolute "
+                        />
                         `
                     </div>
-                        </div>
-        {/* <div className="  w-screen overflow-hidden bg-red-500"> 
+                </div>
+                {/* <div className="  w-screen overflow-hidden bg-red-500"> 
         <Parallax pages={5}>
         <ParallaxLayer offset={0} speed={0.5} style={{ ...alignCenter, justifyContent: 'center' }}>
           <p className="center text-white text-4xl font-bold">Scroll down</p>
@@ -106,7 +106,6 @@ function HomeBanner({ scrollY }: Props) {
         </ParallaxLayer> 
       </Parallax>
       </div> */}
-                    
             </div>
         </section>
     );

@@ -25,7 +25,7 @@ const Home: NextPage = () => {
             </Head>
             <Header scrollY={scrollY} />
             <HomeBanner scrollY={scrollY} /> {/* Image with a brief greetings */}
-            {/* <ResearchTopic /> Research topic introduction */}
+            <ResearchTopic /> {/* Research topic introduction */}
             {/*  <Publication />  publication status and relationship */}
             <Timeline /> {/* bio timeline */}
             {/* Other Component */}

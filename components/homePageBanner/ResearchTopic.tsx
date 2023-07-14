@@ -1,7 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { Controller, Scene } from 'react-scrollmagic';
 
-type Props = { scrollY: number };
+type Props = {};
 
 const data = [
     {
@@ -29,29 +29,26 @@ const data = [
     },
 ];
 
-function ResearchTopic({ scrollY }: Props) {
+function ResearchTopic({}: Props) {
     return (
-        <section id="researchTopic" className={`w-full `}>
-            <motion.div
-                        initial={{x: 0, opacity: 1 }}
-                        whileInView={{x: 0, opacity: 1 }}
-                        transition={{ duration: 1 }}
-                        className=""
-                    >
-                        {data.map((item, index) => {
-                return (
-                    <div key={index} className="w-full flex justify-start">
-                        <div className={`relative w-full h-1/4 center flex justify-start ` + item.background}>
-                            <div id="content" className="h-4/5 p-20 space-y-10 ">
-                                <div className="text-4xl">{item.title}</div>
-                                <button className="text-xl outline p-3">Find Out More</button>
-                            </div>
-                        </div>
+        <section id="researchTopic" className="h-[400vh] flex">
+            <Controller>
+                <Scene duration={'300%'} triggerHook={0}>
+                    <div id="title" className="w-1/2 h-screen !m-0 text-4xl center">
+                        <h2>Research Topic</h2>
                     </div>
-                );
-            })}
-                    </motion.div>
-            
+                </Scene>
+            </Controller>
+            <div id="container" className="w-1/2">
+                {data.map((item, index) => {
+                    return (
+                        <div key={index} className={`h-screen flex flex-col justify-around items-center ` + item.background}>
+                            <h2 className="text-4xl">{item.title}</h2>
+                            <p className="w-4/5 text-lg">{item.content}</p>
+                        </div>
+                    );
+                })}
+            </div>
         </section>
     );
 }
